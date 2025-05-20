@@ -1,5 +1,5 @@
 require "pg"
-require "pry"
+# require "pry"
 
 class DatabasePersistence
   def initialize(logger)
