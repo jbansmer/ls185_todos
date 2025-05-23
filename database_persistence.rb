@@ -1,5 +1,5 @@
 require "pg"
-# require "pry"
+require "pry"
 
 class DatabasePersistence
   def initialize(logger)
@@ -16,7 +16,8 @@ class DatabasePersistence
   end
 
   def query(statement, *params)
-    @logger.info "#{statement}: #{params}"
+    # @logger.info "#{statement}: #{params}"
+    puts @logger.info(ENV)
     @db.exec_params(statement, params)
   end
 
