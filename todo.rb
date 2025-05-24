@@ -208,10 +208,6 @@ post "/lists/:id/complete_all" do
 
   @storage.mark_all_todos_as_completed(@list_id)
 
-  # @list[:todos].each do |todo|
-  #   todo[:completed] = true
-  # end
-
   session[:success] = "All todos have been completed."
   redirect "/lists/#{@list_id}"
 end
